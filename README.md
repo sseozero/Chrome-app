@@ -10,3 +10,30 @@ JS로 크롬앱 만들기 (노마드코더)
 1. Login 기능 구현
   
     * localstorage 이용하여 사용자 기록
+
+
+2. Clock 기능 구현
+
+	* 함수 즉시 호출
+	```
+	
+	...
+	getClock(); 	// 함수 즉시 호출 => 안해주면 00:00:00 상태에서 1초 후 현재시간 나타남 
+	setInterval(getClock, 1000);
+	
+	```
+
+	* padStart/padEnd 이용하여 숫자를 두자리씩 표현
+
+	* String으로 나타내고 싶을때는 String()으로 감싸고 ()안에 코드 입력
+
+	```
+	
+	String(date.getHours()).padStart(2, "0")
+	
+	// : 시간을 string으로 나타내고, string의 길이가 2가 아니라면 앞에 0을 추가해라
+	
+	```
+
+
+	
